@@ -1,17 +1,11 @@
-# @rahulmutt/pi-ralph
+# Modification of @rahulmutt/pi-ralph
 
 A [pi](https://github.com/badlogic/pi) extension that adds the `/ralph` command — a Ralph Wiggum loop that runs a prompt file repeatedly across fresh sessions.
 
 ## Install
 
 ```bash
-pi install npm:@rahulmutt/pi-ralph
-```
-
-Or try it without installing:
-
-```bash
-pi -e npm:@rahulmutt/pi-ralph
+pi install ./extensions/pi-ralph-with-prompt
 ```
 
 ## Usage
@@ -19,6 +13,12 @@ pi -e npm:@rahulmutt/pi-ralph
 ```text
 /ralph <prompt-file>
 /ralph [iterations] <prompt-file>
+
+OR
+
+/ralph -p "prompt with /skill"
+/ralph [iterations] -p "prompt with /skill"
+
 /ralph stop
 ```
 
@@ -28,6 +28,7 @@ pi -e npm:@rahulmutt/pi-ralph
 /ralph prompts/implement.md
 /ralph 5 prompts/implement.md
 /ralph 2 "prompts/my prompt.md"
+/ralph 10 -p "prompt with /skill"
 /ralph stop
 ```
 
